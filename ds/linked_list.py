@@ -49,43 +49,6 @@ class LinkedList:
             self.last_node.next_node = Node(data, None)
             self.last_node = self.last_node.next_node
 
-    def insert_at(self, index, data):
-        if index < 0 or index > self.get_length():
-            raise Exception("Invalid Index")
-
-        if index == 0:
-            self.insert_at_begining(data)
-            return
-
-        count = 0
-        itr = self.head
-        while itr:
-            if count == index - 1:
-                node = Node(data, itr.next_node)
-                itr.next_node = node
-                break
-
-            itr = itr.next_node
-            count += 1
-
-    def remove_at(self, index):
-        if index < 0 or index >= self.get_length():
-            raise Exception("Invalid Index")
-
-        if index == 0:
-            self.head = self.head.next_node
-            return
-
-        count = 0
-        itr = self.head
-        while itr:
-            if count == index - 1:
-                itr.next_node = itr.next_node.next_node
-                break
-
-            itr = itr.next_node
-            count += 1
-
     def get_user_by_id(self, user_id):
         node = self.head
         while node:
