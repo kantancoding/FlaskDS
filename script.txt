@@ -1,9 +1,0 @@
-In this video, we'll set up and configure the skeleton of our API. It should be noted that
-in a real production application, the structure of your code will likely be different depending
-on the size of the application. For the purposes of this tutorial, and to reduce the level of
-complexity of the application structure in order to focus on learning the targeted concepts, 
-we will write the entirety of our API, with the exception of our data structures, in one dot py file.
-If you would like to later extend this API, you can easily reorganize the structure of the application 
-by splitting the single dot py file and moving the resulting parts around according to your needs.
- 
- 
