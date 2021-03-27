@@ -6,7 +6,7 @@ from sqlalchemy import event
 from sqlalchemy.engine import Engine
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-import otherexample
+import server
 
 # app
 app = Flask(__name__)
@@ -35,7 +35,7 @@ for i in range(200):
     address = faker.address()
     phone = faker.msisdn()
     email = f'{name.replace(" ", "_")}@email.com'
-    new_user = otherexample.User(name=name, address=address, phone=phone, email=email)
+    new_user = server.User(name=name, address=address, phone=phone, email=email)
     db.session.add(new_user)
     db.session.commit()
 
@@ -46,8 +46,9 @@ for i in range(200):
     date = faker.date_time()
     user_id = randrange(1, 200)
 
-    new_blog_post = otherexample.BlogPost(
+    new_blog_post = server.BlogPost(
         title=title, body=body, date=date, user_id=user_id
     )
     db.session.add(new_blog_post)
     db.session.commit()
+
