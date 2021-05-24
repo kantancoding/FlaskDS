@@ -36,6 +36,7 @@ class LinkedList:
         if self.head is None:
             self.head = Node(data, None)
             self.last_node = self.head
+            return
 
         new_node = Node(data, self.head)
         self.head = new_node
