@@ -35,13 +35,9 @@ class BinarySearchTree:
             return node.data
 
         if blog_post_id < node.data["id"] and node.left is not None:
-            if blog_post_id == node.left.data["id"]:
-                return node.left.data
             return self._search_recursive(blog_post_id, node.left)
 
         if blog_post_id > node.data["id"] and node.right is not None:
-            if blog_post_id == node.right.data["id"]:
-                return node.right.data
             return self._search_recursive(blog_post_id, node.right)
 
         return False
